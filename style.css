@@ -5,7 +5,7 @@
     --pink_color: #cc99cc;
     --red_color: #cc6666;
     --orange_color: #ff9966;
-    --yellow_color: #ff9900;
+    --yellow_color: #ff9900; 
 
 
   }
@@ -225,7 +225,6 @@ li {
     overflow: hidden;
     background: var(--pink_color);
     white-space: nowrap;
-    margin-right: 0.8rem;
     border-radius: 60px;
     display: flex;
 }
@@ -234,7 +233,6 @@ li {
     overflow: hidden;
     background: var(--red_color);
     white-space: nowrap;
-    margin-right: 0.8rem;
     border-radius: 60px;
     display: flex;
 }
@@ -243,7 +241,6 @@ li {
     overflow: hidden;
     background: var(--orange_color);
     white-space: nowrap;
-    margin-right: 0.8rem;
     border-radius: 60px;
     display: flex;
 }
@@ -252,7 +249,6 @@ li {
     overflow: hidden;
     background: var(--yellow_color);
     white-space: nowrap;
-    margin-right: 0.8rem;
     border-radius: 60px;
     display: flex;
 }
@@ -262,32 +258,28 @@ li div a {
     opacity: 0;
     color: #2b2929;
     max-width: 0;
-    display: inline-block;
-    justify-content: center;
-    align-content: center;
     text-decoration: none;
-    transition: max-width 1s ease-out .1s, opacity 1s ease-out .1s, color;
+    transition: max-width 0.5s ease-in .1s;
     transform: translateX(1);
 }
 
-li div:hover a {
+li div:hover a, li div i {
     opacity: 1;
-    width: 8.3rem;
-    max-width: 20rem;
-    text-align: center;
+    width: 100%;
+    max-width: 30rem;
     align-self: center;
+    padding-right: 1rem;
 }
 
 li div i {
-    float: inline-end;    
+    text-align: center;
+    float: left;    
     font-weight: bold;
-    font-size: 0.8rem;
-    transition: transform 0.3s ease;
+    font-size: 1rem;
+    transition: transform 0.1s ease;
 }
 
-li div:hover i {
-    transform: translateX(2rem); 
-}
+
 
 .section-heading {
     display: inline;
@@ -298,7 +290,6 @@ li div:hover i {
     margin: 1.5rem auto; 
     border-radius: 60px;
     padding: 1.5rem 1.5rem;
-
 }
 
 #enterprise-tos {
@@ -469,3 +460,4 @@ li div:hover i {
         height: 45rem;
     }
 }
+
