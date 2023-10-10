@@ -40,7 +40,7 @@ body {
 
 /* Layout */
 
-li {
+.site-nav__item1, .site-nav__item2, .site-nav__item3, .site-nav__item4 {
     display: flex;
     justify-content: center;
     margin-bottom: 1rem;
@@ -55,6 +55,7 @@ li {
     border: 0.5rem solid var(--main-border__color);
     border-radius: 60px;
     margin-top: 5rem;
+    position: relative;
 }
 @media (max-width: 30rem) {
     .main {
@@ -221,7 +222,7 @@ li {
     }
 }
 
-.site-nav__item1 div {
+.site-nav__item1 .site-nav__content {
     overflow: hidden;
     background: var(--pink_color);
     white-space: nowrap;
@@ -229,7 +230,7 @@ li {
     display: flex;
 }
 
-.site-nav__item2 div {
+.site-nav__item2 .site-nav__content {
     overflow: hidden;
     background: var(--red_color);
     white-space: nowrap;
@@ -237,7 +238,7 @@ li {
     display: flex;
 }
 
-.site-nav__item3 div {
+.site-nav__item3 .site-nav__content {
     overflow: hidden;
     background: var(--orange_color);
     white-space: nowrap;
@@ -245,7 +246,7 @@ li {
     display: flex;
 }
 
-.site-nav__item4 div {
+.site-nav__item4 .site-nav__content {
     overflow: hidden;
     background: var(--yellow_color);
     white-space: nowrap;
@@ -253,7 +254,7 @@ li {
     display: flex;
 }
 
-li div a {
+li .site-nav__content a {
     background-color: transparent;
     opacity: 0;
     color: #2b2929;
@@ -263,7 +264,7 @@ li div a {
     transform: translateX(1);
 }
 
-li div:hover a, li div i {
+li .site-nav__content:hover a, li .site-nav__content i {
     opacity: 1;
     width: 100%;
     max-width: 30rem;
@@ -271,15 +272,13 @@ li div:hover a, li div i {
     padding-right: 1rem;
 }
 
-li div i {
+li .site-nav__content i {
     text-align: center;
     float: left;    
     font-weight: bold;
     font-size: 1rem;
     transition: transform 0.1s ease;
 }
-
-
 
 .section-heading {
     display: inline;
@@ -320,7 +319,6 @@ li div i {
         font-size: 3.5rem;
     }
 }
-
 
 .section-description {
     font-size: 1rem;
@@ -461,3 +459,50 @@ li div i {
     }
 }
 
+.scroll-top {
+    position: absolute; /* relative to its positioned <main> parent */
+    top: 120vh; /* starts below the bottom of the screen */
+    bottom: 3rem; /* stops scrolling before the end */
+    right: 2rem; /* offset from right hand side */
+  }
+  
+  .scroll-top__link {
+    position: -webkit-sticky; /* for Safari */
+    position: sticky; /* 'relative' until element reaches... */
+    top: 90vh; /* 90% viewport height from the top, when it becomes 'fixed' - 
+    until its container toggles it back to 'relative' */
+    text-decoration: none;
+    font-size: 5rem;
+    color: var(--title_color);
+    opacity: 0.7;
+  }
+
+  .scroll-top__link:hover {
+    opacity: 1;
+  }
+
+  @media (max-width: 30rem) {
+    .scroll-top__link {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 31rem) {
+    .scroll-top__link {
+        font-size: 3rem;
+    }
+    
+}
+
+@media (min-width: 50rem) {
+    .scroll-top__link {
+        font-size: 4rem;
+    }
+    
+}
+
+@media (min-width: 68rem) {
+    .scroll-top__link {
+        font-size: 5rem;
+    }
+}
