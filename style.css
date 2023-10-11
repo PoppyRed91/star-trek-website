@@ -6,9 +6,7 @@
     --red_color: #cc6666;
     --orange_color: #ff9966;
     --yellow_color: #ff9900; 
-
-
-  }
+}
 
 /* Reset */
 
@@ -39,12 +37,6 @@ body {
 }
 
 /* Layout */
-
-.site-nav__item1, .site-nav__item2, .site-nav__item3, .site-nav__item4 {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1rem;
-}
 
 .main {
     display: grid;
@@ -81,6 +73,12 @@ body {
     }
 }
 
+.site-nav__item1, .site-nav__item2, .site-nav__item3, .site-nav__item4 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
 .section {
     display: grid;
     grid-template-columns: 1fr;
@@ -88,7 +86,6 @@ body {
     justify-content: center;
     align-content: start;
 }
-
 
 /* Components*/
 
@@ -325,7 +322,7 @@ li .site-nav__content i {
     color: white;
     background-color: rgb(0, 0, 0);
     margin: 1.5rem 1.5rem;
-    opacity: 0.1;
+    opacity: 0.5;
 	transition: 1s all ease-in;
 	-moz-transition: 1s all ease-in;
 	-webkit-transition: 1s all ease-in;
@@ -460,17 +457,16 @@ li .site-nav__content i {
 }
 
 .scroll-top {
-    position: absolute; /* relative to its positioned <main> parent */
-    top: 120vh; /* starts below the bottom of the screen */
-    bottom: 3rem; /* stops scrolling before the end */
-    right: 2rem; /* offset from right hand side */
+    position: absolute; 
+    top: 120vh; 
+    bottom: 3rem; 
+    right: 2rem; 
   }
   
   .scroll-top__link {
-    position: -webkit-sticky; /* for Safari */
-    position: sticky; /* 'relative' until element reaches... */
-    top: 90vh; /* 90% viewport height from the top, when it becomes 'fixed' - 
-    until its container toggles it back to 'relative' */
+    position: -webkit-sticky; 
+    position: sticky; 
+    top: 90vh; 
     text-decoration: none;
     font-size: 5rem;
     color: var(--title_color);
